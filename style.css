@@ -1,0 +1,98 @@
+:root {
+    color-scheme: light dark;
+    --bg: #fafaf8;
+    --text: #1c1c1e;
+    --muted: #6b6b70;
+    --link: #0b57d0;
+    --border: #e3e3df;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #17171a;
+        --text: #ececee;
+        --muted: #9a9aa2;
+        --link: #8ab4f8;
+        --border: #2d2d33;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+}
+
+main {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem 1.25rem 4rem;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 1rem 0 1.5rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin: 0 0 0.4rem;
+}
+
+.topic {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+}
+
+.nav {
+    margin: 0.5rem 0;
+}
+
+.collections {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.collections li {
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 1.2rem;
+}
+
+.empty {
+    color: var(--muted);
+}
+
+a {
+    color: var(--link);
+    text-underline-offset: 0.2em;
+}
+
+/* Visited links act as a lightweight progress indicator. */
+a:visited {
+    opacity: 0.55;
+}
+
+a:hover,
+a:focus-visible {
+    text-decoration-thickness: 2px;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
