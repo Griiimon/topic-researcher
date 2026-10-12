@@ -51,6 +51,8 @@ def parse_topics(text: str) -> list[str]:
         topic = " ".join(part.split())
         if topic:
             topics.append(topic)
+	# sort topics alphabetically
+    topics.sort(key=lambda t: t.lower())
     return topics
 
 
